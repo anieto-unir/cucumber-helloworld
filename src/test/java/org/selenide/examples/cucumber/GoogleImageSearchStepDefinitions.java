@@ -16,8 +16,8 @@ public class GoogleImageSearchStepDefinitions {
   
   @When("click \"Images\" link")
   public void chooseImagesAsSearchTarget() {
-    $(byText("Aceptar")).click();
-	$(byText("Aceptar")).should(disappear);
+    $(byText("Aceptar todo")).click();
+	$(byText("Aceptar todo")).should(disappear);
 
 	$(byText("Imágenes")).shouldBe(visible);
 	$(byText("Imágenes")).click();
@@ -33,6 +33,6 @@ public class GoogleImageSearchStepDefinitions {
 
   @Then("at least top {int} matching images should be shown")
   public void topTenMatchedImagesShouldBeShown(int resultsCount) {
-    $$(".b_algo").shouldHave(sizeGreaterThanOrEqual(resultsCount));
+    $$(".ivg-i").shouldHave(sizeGreaterThanOrEqual(resultsCount));
   }
 }
