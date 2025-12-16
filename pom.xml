@@ -22,9 +22,9 @@
         <version>2.22.2</version>
         <configuration>
           <systemPropertyVariables>
-            <selenide.headless>false</selenide.headless>
+            <selenide.headless>true</selenide.headless>
             <selenide.downloadsFolder>target/downloads</selenide.downloadsFolder>
-	    <selenide.holdBrowserOpen>true</selenide.holdBrowserOpen>
+	    <selenide.holdBrowserOpen>false</selenide.holdBrowserOpen>
           </systemPropertyVariables>
         </configuration>
       </plugin>
