@@ -16,8 +16,14 @@ public class GoogleImageSearchStepDefinitions {
   
   @When("click \"Images\" link")
   public void chooseImagesAsSearchTarget() {
-    $(byText("Aceptar todo")).click();
-	$(byText("Aceptar todo")).should(disappear);
+//  Elimina dependencia de elemento externo    
+//  $(byText("Aceptar todo")).click();
+//	$(byText("Aceptar todo")).should(disappear);
+
+//  Verifica exista elemento. 
+    if ($(byText("Aceptar todo")).isDisplayed()) {
+        $(byText("Aceptar todo")).click();
+    }
 
 	$(byText("Imágenes")).shouldBe(visible);
 	$(byText("Imágenes")).click();
